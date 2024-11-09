@@ -1,0 +1,252 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background with gradient */
+body {
+  background: linear-gradient(120deg, #f8cdd0, #b3d9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Overlay for contrast */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+/* Main container for sidebar and form */
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  color: #fff;
+  padding: 30px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.sidebar ul li i {
+  margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+  color: #a5d6ff;
+}
+
+/* Form section */
+.form-section {
+  flex: 1;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+form h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Fieldset Styling */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  transition: background 0.3s;
+}
+
+fieldset:hover {
+  background: #f4f7fa;
+}
+
+legend {
+  font-size: 18px;
+  color: #5d5d5d;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #5d5d5d;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Input and Textarea Styling */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+/* Input Focus Styling */
+input:focus, textarea:focus {
+  border-color: #8e44ad;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  background: linear-gradient(90deg, #5d8de2, #6a1b9a);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #6a1b9a;
+  transform: scale(1.05);
+}
+
+/* Resume Display Section */
+#resume-display {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Resume Header and Image */
+.resume-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resume-header img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 120px;
+  height: 120px;
+}
+
+/* Resume Heading */
+#resume-display h2 {
+  font-size: 22px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Resume Sections */
+.resume-section {
+  margin-bottom: 15px;
+}
+
+.resume-section h3 {
+  font-size: 18px;
+  color: #6a1b9a;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .form-section {
+      width: 100%;
+      padding: 20px;
+  }
+
+  form h1 {
+      font-size: 22px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      font-size: 14px;
+      padding: 15px;
+  }
+
+  form h1 {
+      font-size: 20px;
+  }
+
+  input, textarea {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 10px 16px;
+  }
+
+  #resume-display h2 {
+      font-size: 18px;
+  }
+}
